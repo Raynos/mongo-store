@@ -6,7 +6,6 @@ var Store = require("..")
 test("setting values calls update", cc(function (err) {
     var t = this.t
 
-    console.error("callCount", this.update.callCount)
     t.equal(err, null, "error is not null")
     t.ok(this.update.calledOnce, "update was not called")
     t.ok(this.update.calledWith({
