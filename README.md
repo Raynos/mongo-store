@@ -4,12 +4,12 @@ Session store backed by mongodb
 
 ## Example
 
-    var createStore = require("mongo-store")
+    var mongoStore = require("mongo-store")
         , assert = require("assert")
         , mongoCol = require("mongo-col")
 
     mongoCol("example-test-collection-mongo-store", function (collection) {
-        var store = createStore(collection)
+        var store = mongoStore(collection)
         store.set("foo", { "foo": "bar" }, function (err) {
             assert.equal(err, null)
             store.get("foo", function (err, value)  {
